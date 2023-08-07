@@ -6,6 +6,9 @@ from django.http import HttpResponse# класс для отправки отв�
 def lesson(request):
     return HttpResponse("ДЗ")
 
+def lesson5(request):
+    return
+
 
 
 

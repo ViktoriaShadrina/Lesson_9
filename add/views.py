@@ -1,7 +1,5 @@
-from django.shortcuts import render # для того чтобы отдавать html
-
+from django.shortcuts import render 
 from .models import Advertisement
-
 
 # функции-представления
 # <!-- {{}}  - это переменная -->
@@ -9,17 +7,12 @@ from .models import Advertisement
 # <!-- {% if else while for %}  - это блоки с функционалом -->
 
 def home(request):
-    data = Advertisement.objects.all() # беру все записи из БД
-    context = {'advertisements' : data} # словарь
+    data = Advertisement.objects.all() 
+    context = {'advertisements' : data} 
     return render(request, 'index.html', context)
-
-
-
 
 def top_sellers(request):
     return render(request, 'top-sellers.html')
-
-
 
 def test(request):
     return render(request, 'test.html')
